@@ -1,0 +1,44 @@
+project:
+  type: website
+  execute-dir: project
+  render:
+    - README.Rmd
+    - data-raw/README.md
+    - web/*.qmd
+
+website:
+  title: "monitorOSM"
+  repo-url: https://github.com/OSM-Catalan/monitorOSM
+  repo-actions: [edit, issue]
+  site-url: https://osm-catalan.github.io/monitorOSM
+  open-graph: true
+  image: man/figures/logo.png
+  favicon: man/figures/logo.png
+  navbar:
+    logo: man/figures/logo.png
+    left:
+      - data-raw/README.md
+    right:
+      - text: Paquet d'R
+        icon: r-circle-fill
+        href: https://osm-catalan.github.io/monitorOSM/docs/
+    tools:
+      - icon: github
+        href: https://github.com/OSM-Catalan/monitorOSM
+  sidebar:
+    style: "docked"
+    contents:
+      - section: Control de canvis
+        contents:
+          - web/limits.qmd
+          - web/localitats.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    lang: ca
+    language: _language-ca.yml # TODO: elimina. Pendent de https://github.com/quarto-dev/quarto-cli/pull/5968
+
+editor: source
