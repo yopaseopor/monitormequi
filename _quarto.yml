@@ -7,10 +7,10 @@ project:
     - web/*.qmd
 
 website:
-  title: "monitorOSM"
-  repo-url: https://github.com/yopaseopor/monitorOSM
+  title: "monitormequi"
+  repo-url: https://github.com/yopaseopor/monitormequi
   repo-actions: [edit, issue]
-  site-url: https://yopaseopor.github.io/monitorOSM
+  site-url: https://yopaseopor.github.io/monitormequi
   open-graph: true
   image: man/figures/logo.png
   favicon: man/figures/logo.png
@@ -21,10 +21,10 @@ website:
     right:
       - text: Paquet d'R
         icon: r-circle-fill
-        href: https://yopaseopor.github.io/monitorOSM/docs/
+        href: https://yopaseopor.github.io/monitormequi/docs/
     tools:
       - icon: github
-        href: https://github.com/yopaseopor/monitorOSM
+        href: https://github.com/yopaseopor/monitormequi
   sidebar:
     style: "docked"
     contents:

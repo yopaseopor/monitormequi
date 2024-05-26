@@ -1,26 +1,26 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# monitorOSM <img src='man/figures/logo.png' align="right" height=130/>
+# monitormequi <img src='man/figures/logo.png' align="right" height=130/>
 
 <!-- badges: start -->
 
 [![Actualitza i
-publica](https://github.com/yopaseopor/monitorOSM/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/yopaseopor/monitorOSM/actions/workflows/quarto-publish.yml)
-[![pkgdown](https://github.com/yopaseopor/monitorOSM/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/yopaseopor/monitorOSM/actions/workflows/pkgdown.yaml)
-[![R-CMD-check](https://github.com/yopaseopor/monitorOSM/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yopaseopor/monitorOSM/actions/workflows/R-CMD-check.yaml)
-[![pre-commit](https://github.com/yopaseopor/monitorOSM/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/yopaseopor/monitorOSM/actions/workflows/pre-commit.yaml)
-<!-- [![test-coverage](https://github.com/yopaseopor/monitorOSM/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/yopaseopor/monitorOSM/actions/workflows/test-coverage.yaml) -->
+publica](https://github.com/yopaseopor/monitormequi/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/yopaseopor/monitormequi/actions/workflows/quarto-publish.yml)
+[![pkgdown](https://github.com/yopaseopor/monitormequi/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/yopaseopor/monitormequi/actions/workflows/pkgdown.yaml)
+[![R-CMD-check](https://github.com/yopaseopor/monitormequi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yopaseopor/monitormequi/actions/workflows/R-CMD-check.yaml)
+[![pre-commit](https://github.com/yopaseopor/monitormequi/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/yopaseopor/monitormequi/actions/workflows/pre-commit.yaml)
+<!-- [![test-coverage](https://github.com/yopaseopor/monitormequi/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/yopaseopor/monitormequi/actions/workflows/test-coverage.yaml) -->
 
 <!-- badges: end -->
 
-`monitorOSM` és un repositori que serveix per monitoritzar canvis a
+`monitormequi` és un repositori que serveix per monitoritzar canvis a
 [OpenStreetMap](http://www.openstreemap.com) comparant els objectes amb
 [bases de dades de
-referència](https://github.com/yopaseopor/monitorOSM/tree/main/data-raw).
+referència](https://github.com/yopaseopor/monitormequi/tree/main/data-raw).
 
 Podeu veure els informes que s’actualitzen diàriament a
-<https://yopaseopor.github.io/monitorOSM>. Els informes de canvis
+<https://yopaseopor.github.io/monitormequi>. Els informes de canvis
 mostren taules amb l’estat de les etiquetes a OSM i a les bases de dades
 de referència:
 
@@ -88,9 +88,9 @@ enllaços per si es vol deixar comentaris.
 
 Si voleu afegir objectes amb les seves etiquetes a les bases de dades,
 podeu obrir un
-[tiquet](https://github.com/yopaseopor/monitorOSM/issues) o podeu
+[tiquet](https://github.com/yopaseopor/monitormequi/issues) o podeu
 provar de fer un PR amb les instruccions que trobareu a
-[aquí](https://yopaseopor.github.io/monitorOSM/data-raw/README.html).
+[aquí](https://yopaseopor.github.io/monitormequi/data-raw/README.html).
 Fora bo que els estats de referència dels objectes siguin consensuats
 amb la [Comunitat d’OpenStreetmap en
 català](https://wiki.openstreetmap.org/wiki/WikiProject_Catalan#Canals_de_comunicaci%C3%B3_i_mitjans_de_difusi%C3%B3).
@@ -103,7 +103,7 @@ accions de github. El paquet també inclou funcions per restaurar els
 objectes de manera ràpida, però com a projecte comunitari, és important
 intentar parlar amb els usuaris que discrepen de les bases de dades de
 referència. Vegeu la [documentació del paquet
-d’R](https://yopaseopor.github.io/monitorOSM/docs/reference/) per més
+d’R](https://yopaseopor.github.io/monitormequi/docs/reference/) per més
 detalls.
 
 ### Exemple de restauració
@@ -112,19 +112,19 @@ Instal·leu el paquet d’R:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("yopaseopor/monitorOSM")
+remotes::install_github("yopaseopor/monitormequi")
 ```
 
 Restauració de les etiquetes `name` i `wikipedia` de les comarques del
 País Valencià:
 
 ``` r
-library(monitorOSM)
+library(monitormequi)
 
 id <- modifica_etiquetes_osm(
   comarques[comarques$regio == "PV", ],
   claus = c("name", "wikipedia"),
-  comentari = "Restaura els noms de les comarques dels País Valencià", hashtags = "monitorOSM"
+  comentari = "Restaura els noms de les comarques dels País Valencià", hashtags = "monitormequi"
 )
 ```
 

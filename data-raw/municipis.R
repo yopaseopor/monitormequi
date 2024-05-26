@@ -45,8 +45,8 @@ municipis <- municipis_osm[, c(
 
 library(compareDF)
 
-cols <- intersect(names(municipis), names(monitorOSM::municipis))
-diff_municipis <- compare_df(municipis[, cols], monitorOSM::municipis[, cols], group_col = c("osm_type", "osm_id"))
+cols <- intersect(names(municipis), names(monitormequi::municipis))
+diff_municipis <- compare_df(municipis[, cols], monitormequi::municipis[, cols], group_col = c("osm_type", "osm_id"))
 view_html(diff_municipis)
 
 

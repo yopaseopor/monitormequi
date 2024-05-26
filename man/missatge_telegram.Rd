@@ -5,7 +5,7 @@
 \title{Envia un missatge a al grup de Telegram de la \verb{Comunitat en català d'OpenStreetMap}}
 \usage{
 missatge_telegram(
-  missatge = "Hi ha canvis a [monitorOSM](https://yopaseopor.github.io/monitorOSM).",
+  missatge = "Hi ha canvis a [monitormequi](https://yopaseopor.github.io/monitormequi).",
   parse_mode = "Markdown"
 )
 }

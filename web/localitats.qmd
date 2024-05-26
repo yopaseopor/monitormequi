@@ -8,7 +8,7 @@ execute:
 
 
 ```{r biblioteques}
-suppressPackageStartupMessages(library(monitorOSM, quietly = TRUE))
+suppressPackageStartupMessages(library(monitormequi, quietly = TRUE))
 
 # TODO: Sys.setlocale("LC_TIME", "ca_AD.UTF-8") # requereix configurar locale a gh action https://github.com/actions/runner-images/issues/762
 ```
@@ -17,7 +17,7 @@ suppressPackageStartupMessages(library(monitorOSM, quietly = TRUE))
 
 ## Localitats que fan d'`admin_centre` de relacions de municipis
 
-[BD de referència](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/loc_admin_centre_municipis.tsv)
+[BD de referència](https://github.com/yopaseopor/monitormequi/blob/main/data-raw/loc_admin_centre_municipis.tsv)
 
 ```{r admin_centre municipis}
 canvis_loc_admin_centre_municipis <- comprova_canvis_osm(
@@ -46,7 +46,7 @@ if (any(hi_ha_canvis) &&
   Sys.getenv("GITHUB_WORKFLOW") == "Render and Publish"
 ) {
   m <- missatge_telegram(
-    missatge = "Hi ha canvis a [localitats](https://yopaseopor.github.io/monitorOSM/web/localitats.html)."
+    missatge = "Hi ha canvis a [localitats](https://yopaseopor.github.io/monitormequi/web/localitats.html)."
   )
 }
 ```
