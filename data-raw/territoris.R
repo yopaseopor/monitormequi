@@ -44,6 +44,6 @@ territoris <- territoris_osm[, c("name:ca", "regio", "osm_id", "osm_type", "name
 
 library(compareDF)
 
-cols <- intersect(names(territoris), names(monitorOSM::territoris))
-diff_territoris <- compare_df(territoris[, cols], monitorOSM::territoris[, cols], group_col = c("osm_type", "osm_id"))
+cols <- intersect(names(territoris), names(monitormequi::territoris))
+diff_territoris <- compare_df(territoris[, cols], monitormequi::territoris[, cols], group_col = c("osm_type", "osm_id"))
 view_html(diff_territoris)

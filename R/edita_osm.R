@@ -12,7 +12,7 @@
 #' Cal identificar-se amb un usuari d'OSM i els canvis es faran amb aquest usuari i sota la seva responsabilitat.
 #'
 #' Les etiquetes més habituals pels conjunts de canvis inclouen `source` i `hashtags`. En el marc del projecte,
-#' `monitorOSM`, pot ser bona idea afegir el paràmetre `hashtags = "monitorOSM"` per poder fer un seguiment de les
+#' `monitormequi`, pot ser bona idea afegir el paràmetre `hashtags = "monitormequi"` per poder fer un seguiment de les
 #' edicions. Vegeu <https://wiki.openstreetmap.org/wiki/Changeset> per més detalls.
 #'
 #' OSM és un projecte col·laboratiu on participen milers de persones. Reviseu bé els canvis, consensueu-los amb la
@@ -31,7 +31,7 @@
 #' modifica_etiquetes_osm(
 #'   comarques,
 #'   claus = "name",
-#'   comentari = "Restaura els noms de les comarques dels Països Catalans", hashtags = "monitorOSM"
+#'   comentari = "Restaura els noms de les comarques dels Països Catalans", hashtags = "monitormequi"
 #' )
 #' }
 modifica_etiquetes_osm <- function(x, claus, comentari, ...) {

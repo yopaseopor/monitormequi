@@ -7,9 +7,9 @@
 #' @export
 #'
 #' @examples
-missatge_telegram <- function(missatge = "Hi ha canvis a [monitorOSM](https://osm-catalan.github.io/monitorOSM).",
+missatge_telegram <- function(missatge = "Hi ha canvis a [monitormequi](https://yopaseopor.github.io/monitormequi).",
                               parse_mode = "Markdown") {
-  bot <- telegram.bot::Bot(token = telegram.bot::bot_token("monitorOSM_bot"))
+  bot <- telegram.bot::Bot(token = telegram.bot::bot_token("monitormequi_bot"))
 
   bot$sendMessage(
     chat_id = Sys.getenv("TME_OSMCAT_CHATID"),

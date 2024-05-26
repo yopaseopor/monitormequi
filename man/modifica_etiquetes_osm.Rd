@@ -26,7 +26,7 @@ Obre un conjunt de canvis, edita les etiquetes i tanca el conjunt de canvis.
 Cal identificar-se amb un usuari d'OSM i els canvis es faran amb aquest usuari i sota la seva responsabilitat.
 
 Les etiquetes més habituals pels conjunts de canvis inclouen \code{source} i \code{hashtags}. En el marc del projecte,
-\code{monitorOSM}, pot ser bona idea afegir el paràmetre \code{hashtags = "monitorOSM"} per poder fer un seguiment de les
+\code{monitormequi}, pot ser bona idea afegir el paràmetre \code{hashtags = "monitormequi"} per poder fer un seguiment de les
 edicions. Vegeu \url{https://wiki.openstreetmap.org/wiki/Changeset} per més detalls.
 
 OSM és un projecte col·laboratiu on participen milers de persones. Reviseu bé els canvis, consensueu-los amb la
@@ -42,7 +42,7 @@ noms de columnes d'\code{x} i no és recomanat.
 modifica_etiquetes_osm(
   comarques,
   claus = "name",
-  comentari = "Restaura els noms de les comarques dels Països Catalans", hashtags = "monitorOSM"
+  comentari = "Restaura els noms de les comarques dels Països Catalans", hashtags = "monitormequi"
 )
 }
 }

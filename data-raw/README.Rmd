@@ -16,12 +16,12 @@ knitr::opts_chunk$set(
 # Bases de dades de referència
 
 ```{r taules, echo=FALSE}
-d <- data(package = "monitorOSM")
+d <- data(package = "monitormequi")
 d_list <- new.env()
-data(list = d$results[d$results[, "Title"] != "", "Item"], package = "monitorOSM", envir = d_list)
+data(list = d$results[d$results[, "Title"] != "", "Item"], package = "monitormequi", envir = d_list)
 
 taules <- mapply(function(x, nom) {
-  url <- paste0("[", nom, "](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/", nom, ".tsv)")
+  url <- paste0("[", nom, "](https://github.com/yopaseopor/monitormequi/blob/main/data-raw/", nom, ".tsv)")
   out <- data.frame(bd = url, n_obj = nrow(x), n_cols = ncol(x))
   out$columnes <- list(colnames(x))
 
@@ -40,7 +40,7 @@ de referència.
 ## Com afegir noves bases de dades?
 
 Si voleu afegir objectes amb les seves etiquetes a les bases de dades, podeu obrir un
-[tiquet](https://github.com/OSM-Catalan/monitorOSM/issues) o un [PR](https://github.com/OSM-Catalan/monitorOSM/pulls)
+[tiquet](https://github.com/yopaseopor/monitormequi/issues) o un [PR](https://github.com/yopaseopor/monitormequi/pulls)
 que inclogui la base de dades i el codi per generar els informes.
 
 ### Instruccions
@@ -67,7 +67,7 @@ head(cims)
 
 ``` {r exemple cims per comarques}
 library(osmdata)
-library(monitorOSM) # comarques
+library(monitormequi) # comarques
 
 cims_comarca <- mapply(function(id, nom, territori) {
   out <- opq(bbox = paste0("relation(id:", id, ")"), out = "tags", timeout = "100") |>
@@ -102,7 +102,7 @@ usethis::use_data(cims_comarques, overwrite = TRUE, compress = "xz")
 ```
 
 És recomanable preparar un fitxer per gestionar la nova base de dades i desar-la com a taula
-([exemple](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/comarques.R)). També cal documentar la nova
-taula ([exemple](https://github.com/OSM-Catalan/monitorOSM/blob/main/man/comarques.Rd)).
+([exemple](https://github.com/yopaseopor/monitormequi/blob/main/data-raw/comarques.R)). També cal documentar la nova
+taula ([exemple](https://github.com/yopaseopor/monitormequi/blob/main/man/comarques.Rd)).
 
-Per començar a monitorar la nova base de dades cal crear o afegir-la a un fitxer com [limits.qmd](https://github.com/OSM-Catalan/monitorOSM/blob/main/web/limits.qmd).
+Per començar a monitorar la nova base de dades cal crear o afegir-la a un fitxer com [limits.qmd](https://github.com/yopaseopor/monitormequi/blob/main/web/limits.qmd).

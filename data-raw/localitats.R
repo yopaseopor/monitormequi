@@ -79,9 +79,9 @@ edita <- loc_admin_centre_municipis_osm[is.na(loc_admin_centre_municipis_osm$cap
 
 library(compareDF)
 
-cols <- intersect(names(loc_admin_centre_municipis_osm), names(monitorOSM::loc_admin_centre_municipis))
+cols <- intersect(names(loc_admin_centre_municipis_osm), names(monitormequi::loc_admin_centre_municipis))
 diff_loc_admin_centre_muni <- compare_df(
-  loc_admin_centre_municipis_osm[, cols], monitorOSM::loc_admin_centre_municipis[, cols],
+  loc_admin_centre_municipis_osm[, cols], monitormequi::loc_admin_centre_municipis[, cols],
   group_col = c("osm_type", "osm_id")
 )
 view_html(diff_loc_admin_centre_muni)

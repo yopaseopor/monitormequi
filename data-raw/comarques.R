@@ -46,6 +46,6 @@ comarques <- comarques_osm[, c(
 
 library(compareDF)
 
-cols <- intersect(names(comarques), names(monitorOSM::comarques))
-diff_comarques <- compare_df(comarques[, cols], monitorOSM::comarques[, cols], group_col = c("osm_type", "osm_id"))
+cols <- intersect(names(comarques), names(monitormequi::comarques))
+diff_comarques <- compare_df(comarques[, cols], monitormequi::comarques[, cols], group_col = c("osm_type", "osm_id"))
 view_html(diff_comarques)
