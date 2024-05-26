@@ -8,9 +8,9 @@ project:
 
 website:
   title: "monitorOSM"
-  repo-url: https://github.com/OSM-Catalan/monitorOSM
+  repo-url: https://github.com/yopaseopor/monitorOSM
   repo-actions: [edit, issue]
-  site-url: https://osm-catalan.github.io/monitorOSM
+  site-url: https://yopaseopor.github.io/monitorOSM
   open-graph: true
   image: man/figures/logo.png
   favicon: man/figures/logo.png
@@ -21,10 +21,10 @@ website:
     right:
       - text: Paquet d'R
         icon: r-circle-fill
-        href: https://osm-catalan.github.io/monitorOSM/docs/
+        href: https://yopaseopor.github.io/monitorOSM/docs/
     tools:
       - icon: github
-        href: https://github.com/OSM-Catalan/monitorOSM
+        href: https://github.com/yopaseopor/monitorOSM
   sidebar:
     style: "docked"
     contents:

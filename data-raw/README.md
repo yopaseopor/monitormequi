@@ -5,11 +5,11 @@
 
 | bd                                                                                                                        | n_obj | n_cols | columnes                                                                                                               |
 |:--------------------------------------------------------------------------------------------------------------------------|------:|-------:|:-----------------------------------------------------------------------------------------------------------------------|
-| [comarques](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/comarques.tsv)                                   |    95 |      9 | name:ca , regio , osm_id , osm_type , name , wikipedia , wikidata , admin_level , historic:admin_level                 |
-| [municipis](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/municipis.tsv)                                   |  1671 |      9 | name:ca , regio , comarca , osm_id , osm_type , name , wikipedia , wikidata , admin_level                              |
-| [loc_admin_centre_municipis](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/loc_admin_centre_municipis.tsv) |  1673 |     12 | regio , comarca , municipi , osm_type , osm_id , name:ca , name , wikidata , wikipedia , place , capital , admin_level |
-| [territoris](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/territoris.tsv)                                 |    10 |      7 | name:ca , regio , osm_id , osm_type , name , wikipedia, wikidata                                                       |
-| [PPCC](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/PPCC.tsv)                                             |     1 |      6 | name:ca , osm_id , osm_type , name , wikipedia, wikidata                                                               |
+| [comarques](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/comarques.tsv)                                   |    95 |      9 | name:ca , regio , osm_id , osm_type , name , wikipedia , wikidata , admin_level , historic:admin_level                 |
+| [municipis](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/municipis.tsv)                                   |  1671 |      9 | name:ca , regio , comarca , osm_id , osm_type , name , wikipedia , wikidata , admin_level                              |
+| [loc_admin_centre_municipis](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/loc_admin_centre_municipis.tsv) |  1673 |     12 | regio , comarca , municipi , osm_type , osm_id , name:ca , name , wikidata , wikipedia , place , capital , admin_level |
+| [territoris](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/territoris.tsv)                                 |    10 |      7 | name:ca , regio , osm_id , osm_type , name , wikipedia, wikidata                                                       |
+| [PPCC](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/PPCC.tsv)                                             |     1 |      6 | name:ca , osm_id , osm_type , name , wikipedia, wikidata                                                               |
 
 En total es monitoritzen 3450 objectes d’OpenStreetMap.
 
@@ -20,8 +20,8 @@ les dades i, si cal, corregiu les bases de dades de referència.
 
 Si voleu afegir objectes amb les seves etiquetes a les bases de dades,
 podeu obrir un
-[tiquet](https://github.com/OSM-Catalan/monitorOSM/issues) o un
-[PR](https://github.com/OSM-Catalan/monitorOSM/pulls) que inclogui la
+[tiquet](https://github.com/yopaseopor/monitorOSM/issues) o un
+[PR](https://github.com/yopaseopor/monitorOSM/pulls) que inclogui la
 base de dades i el codi per generar els informes.
 
 ### Instruccions
@@ -119,10 +119,10 @@ usethis::use_data(cims_comarques, overwrite = TRUE, compress = "xz")
 
 És recomanable preparar un fitxer per gestionar la nova base de dades i
 desar-la com a taula
-([exemple](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/comarques.R)).
+([exemple](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/comarques.R)).
 També cal documentar la nova taula
-([exemple](https://github.com/OSM-Catalan/monitorOSM/blob/main/man/comarques.Rd)).
+([exemple](https://github.com/yopaseopor/monitorOSM/blob/main/man/comarques.Rd)).
 
 Per començar a monitorar la nova base de dades cal crear o afegir-la a
 un fitxer com
-[limits.qmd](https://github.com/OSM-Catalan/monitorOSM/blob/main/web/limits.qmd).
+[limits.qmd](https://github.com/yopaseopor/monitorOSM/blob/main/web/limits.qmd).

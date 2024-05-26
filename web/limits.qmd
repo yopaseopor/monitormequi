@@ -17,7 +17,7 @@ suppressPackageStartupMessages(library(monitorOSM, quietly = TRUE))
 
 ## Països Catalans
 
-[BD de referència](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/PPCC.tsv)
+[BD de referència](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/PPCC.tsv)
 
 ```{r ppcc}
 canvis_ppcc <- comprova_canvis_osm(PPCC, centre = TRUE)
@@ -33,7 +33,7 @@ versio_canvis_html(versio_canvis_ppcc)
 
 ## Territoris
 
-[BD de referència](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/territoris.tsv)
+[BD de referència](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/territoris.tsv)
 
 ```{r territoris}
 canvis_territoris <- comprova_canvis_osm(territoris[, setdiff(names(territoris), "regio")], centre = TRUE)
@@ -49,7 +49,7 @@ versio_canvis_html(versio_canvis_territoris)
 
 ## Comarques
 
-[BD de referència](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/comarques.tsv)
+[BD de referència](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/comarques.tsv)
 
 ```{r comarques}
 canvis_comarques <- comprova_canvis_osm(comarques[, setdiff(names(comarques), "regio")], centre = TRUE)
@@ -65,7 +65,7 @@ versio_canvis_html(versio_canvis_comarques)
 
 ## Municipis
 
-[BD de referència](https://github.com/OSM-Catalan/monitorOSM/blob/main/data-raw/municipis.tsv)
+[BD de referència](https://github.com/yopaseopor/monitorOSM/blob/main/data-raw/municipis.tsv)
 
 ```{r municipis}
 canvis_municipis <- comprova_canvis_osm(municipis[, setdiff(names(municipis), c("regio", "comarca"))], centre = TRUE)
@@ -90,6 +90,6 @@ if (any(hi_ha_canvis) &&
   # format(Sys.Date(), format = "%u") %in% "5" &&  # Només els divendres
   Sys.getenv("GITHUB_WORKFLOW") == "Render and Publish"
 ) {
-  m <- missatge_telegram(missatge = "Hi ha canvis a [limits](https://osm-catalan.github.io/monitorOSM/web/limits.html).")
+  m <- missatge_telegram(missatge = "Hi ha canvis a [limits](https://yopaseopor.github.io/monitorOSM/web/limits.html).")
 }
 ```
