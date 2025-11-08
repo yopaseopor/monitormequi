@@ -1,0 +1,108 @@
+# monitormequi
+
+`monitormequi` és un repositori que serveix per monitoritzar canvis a
+[OpenStreetMap](http://www.openstreemap.com) comparant els objectes amb
+[bases de dades de
+referència](https://github.com/yopaseopor/monitormequi/tree/main/data-raw).
+
+Podeu veure els informes que s’actualitzen diàriament a
+<https://yopaseopor.github.io/monitormequi>. Els informes de canvis
+mostren taules amb l’estat de les etiquetes a OSM i a les bases de dades
+de referència:
+
+|          osm_url           | canvi |      name:ca      |     name     |  wikipedia  |
+|:--------------------------:|:-----:|:-----------------:|:------------:|:-----------:|
+| <http://osm.org/node/XXXX> |  \+   |     nom a OSM     | Sense canvis |             |
+| <http://osm.org/node/XXXX> |  \-   | nom de referència | Sense canvis | ca:Eliminat |
+
+També es mostra quins conjunts de canvis han trencat les etiquetes amb
+enllaços per si es vol deixar comentaris.
+
+## Afegir nous objectes a les bases de dades
+
+Si voleu afegir objectes amb les seves etiquetes a les bases de dades,
+podeu obrir un
+[tiquet](https://github.com/yopaseopor/monitormequi/issues) o podeu
+provar de fer un PR amb les instruccions que trobareu a
+[aquí](https://yopaseopor.github.io/monitormequi/data-raw/README.html).
+Fora bo que els estats de referència dels objectes siguin consensuats
+amb la [Comunitat d’OpenStreetmap en
+català](https://wiki.openstreetmap.org/wiki/WikiProject_Catalan#Canals_de_comunicaci%C3%B3_i_mitjans_de_difusi%C3%B3).
+
+## Paquet d’R
+
+La consulta, comparació amb bases de dades de referència i renderització
+de la web es fan amb un paquet d’[R](https://cran.r-project.org/) i
+accions de github. El paquet també inclou funcions per restaurar els
+objectes de manera ràpida, però com a projecte comunitari, és important
+intentar parlar amb els usuaris que discrepen de les bases de dades de
+referència. Vegeu la [documentació del paquet
+d’R](https://yopaseopor.github.io/monitormequi/docs/reference/) per més
+detalls.
+
+### Exemple de restauració
+
+Instal·leu el paquet d’R:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("yopaseopor/monitormequi")
+```
+
+Restauració de les etiquetes `name` i `wikipedia` de les comarques del
+País Valencià:
+
+``` r
+library(monitormequi)
+
+id <- modifica_etiquetes_osm(
+  comarques[comarques$regio == "PV", ],
+  claus = c("name", "wikipedia"),
+  comentari = "Restaura els noms de les comarques dels País Valencià", hashtags = "monitormequi"
+)
+```
+
+Retorna l’identificador del conjunt de canvis.
+
+# Package index
+
+## Funcions
+
+- [`canvis_html()`](https://yopaseopor.github.io/monitormequi/docs/reference/canvis_html.md)
+  : Canvis en html
+
+- [`cerca_versio_canvis()`](https://yopaseopor.github.io/monitormequi/docs/reference/cerca_versio_canvis.md)
+  : Cerca les versions que introdueixen canvis
+
+- [`comprova_canvis_osm()`](https://yopaseopor.github.io/monitormequi/docs/reference/comprova_canvis_osm.md)
+  : Comprova canvis a OSM
+
+- [`consulta_etiquetes_osm()`](https://yopaseopor.github.io/monitormequi/docs/reference/consulta_etiquetes_osm.md)
+  : Consulta etiquetes d'OSM
+
+- [`missatge_telegram()`](https://yopaseopor.github.io/monitormequi/docs/reference/missatge_telegram.md)
+  :
+
+  Envia un missatge a al grup de Telegram de la
+  `Comunitat en català d'OpenStreetMap`
+
+- [`modifica_etiquetes_osm()`](https://yopaseopor.github.io/monitormequi/docs/reference/modifica_etiquetes_osm.md)
+  : Modifica etiquetes a OSM
+
+- [`versio_canvis_html()`](https://yopaseopor.github.io/monitormequi/docs/reference/versio_canvis_html.md)
+  : Mostra les versions que introdueixen canvis en html
+
+## Bases de dades de referència
+
+- [`PPCC`](https://yopaseopor.github.io/monitormequi/docs/reference/PPCC.md)
+  : Països Catalans
+- [`comarques`](https://yopaseopor.github.io/monitormequi/docs/reference/comarques.md)
+  : Comarques dels Països Catalans
+- [`loc_admin_centre_municipis`](https://yopaseopor.github.io/monitormequi/docs/reference/loc_admin_centre_municipis.md)
+  : Centres administratius de les relacions dels municipis dels Països
+  Catalans
+- [`municipis`](https://yopaseopor.github.io/monitormequi/docs/reference/municipis.md)
+  : Municipis dels Països Catalans
+- [`territoris`](https://yopaseopor.github.io/monitormequi/docs/reference/territoris.md)
+  : Territoris dels Països Catalans
+
