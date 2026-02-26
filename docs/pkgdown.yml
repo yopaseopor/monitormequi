@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2026-02-25T03:52Z
+last_built: 2026-02-26T03:45Z
 urls:
   reference: https://yopaseopor.github.io/monitormequi/docs/reference
   article: https://yopaseopor.github.io/monitormequi/docs/articles
