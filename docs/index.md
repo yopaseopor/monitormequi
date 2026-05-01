@@ -45,6 +45,7 @@ detalls.
 Instal·leu el paquet d’R:
 
 ``` r
+
 # install.packages("remotes")
 remotes::install_github("yopaseopor/monitormequi")
 ```
@@ -53,6 +54,7 @@ Restauració de les etiquetes `name` i `wikipedia` de les comarques del
 País Valencià:
 
 ``` r
+
 library(monitormequi)
 
 id <- modifica_etiquetes_osm(
